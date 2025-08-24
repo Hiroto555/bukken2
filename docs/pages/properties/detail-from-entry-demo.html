@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="../../assets/media/028c0d39d2e8f589-s.p.woff2" as="font" crossorigin type="font/woff2" />
+    <link rel="preload" href="../../assets/media/5b01f339abf2f1a5.p.woff2" as="font" crossorigin type="font/woff2" />
+    <link rel="preload" href="../../assets/media/f2dba9fbcf2f771b-s.p.woff2" as="font" crossorigin type="font/woff2" />
+    <link rel="stylesheet" href="../../assets/css/ea79b3adb3d66b3d.css" data-precedence="next" />
+    <link rel="stylesheet" href="../../assets/css/b5d7c1d9562874f8.css" data-precedence="next" />
+    <script src="../../assets/js/include-partials.js" defer></script>
+    <script src="../../assets/js/suumo-detail.js" defer></script>
+    <title>物件詳細（デモ） | ゆめハウス</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-white __className_39a0a9">
+      <div data-include="../../partials/header.html" data-base="../.."></div>
+
+      <section class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 flex items-end justify-between">
+          <div>
+            <h1 id="propTitle" class="text-3xl md:text-4xl font-bold">（物件名）</h1>
+            <div class="mt-2 text-white/90">所在地: <span id="propAddress">未入力</span></div>
+          </div>
+          <div class="text-right">
+            <div class="text-2xl md:text-4xl font-bold text-yellow-300"><span id="propPrice">価格未入力</span></div>
+            <div class="text-sm">間取り: <span id="propMadori">未入力</span></div>
+          </div>
+        </div>
+      </section>
+
+      <main class="max-w-7xl mx-auto px-4 py-10">
+        <div class="grid lg:grid-cols-3 gap-8">
+          <!-- メイン -->
+          <div class="lg:col-span-2 space-y-8">
+            <section class="bg-white rounded-xl shadow">
+              <div class="p-6 border-b">
+                <h2 class="text-xl font-bold text-blue-900">キャッチコピー</h2>
+              </div>
+              <div class="p-6 space-y-4">
+                <div>
+                  <div class="text-sm text-gray-500">メインキャッチ</div>
+                  <div id="propMainCatch" class="mt-1 whitespace-pre-wrap">未入力</div>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-500">サブキャッチ</div>
+                  <div id="propSubCatch" class="mt-1 whitespace-pre-wrap">未入力</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow" id="sec-basic">
+              <div class="p-6 border-b">
+                <h2 class="text-xl font-bold text-blue-900">基本情報</h2>
+              </div>
+              <div class="p-6">
+                <div class="grid md:grid-cols-2 gap-4 text-gray-800">
+                  <div class="flex justify-between py-2 border-b"><span>所在地</span><span id="basic_address">—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>物件名</span><span id="basic_name">—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>種別</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>号棟</span><span>—</span></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow" id="sec-price">
+              <div class="p-6 border-b"><h2 class="text-xl font-bold text-blue-900">価格・費用</h2></div>
+              <div class="p-6">
+                <div class="grid md:grid-cols-2 gap-4 text-gray-800">
+                  <div class="flex justify-between py-2 border-b"><span>価格</span><span id="price_value">—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>町会費など</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>有線放送費</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>インターネット費</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>CATV費</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>温泉</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b md:col-span-2"><span>その他費用</span><span>—</span></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow" id="sec-land">
+              <div class="p-6 border-b"><h2 class="text-xl font-bold text-blue-900">土地情報</h2></div>
+              <div class="p-6">
+                <div class="grid md:grid-cols-2 gap-4 text-gray-800">
+                  <div class="flex justify-between py-2 border-b"><span>土地面積</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>建ぺい率</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>容積率</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>私道負担</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>地役権</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>前面道路1〜3</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>上水道/下水道/ガス</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>セットバック</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b md:col-span-2"><span>用途地域/建築許可理由</span><span>—</span></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow" id="sec-building">
+              <div class="p-6 border-b"><h2 class="text-xl font-bold text-blue-900">建物情報</h2></div>
+              <div class="p-6">
+                <div class="grid md:grid-cols-2 gap-4 text-gray-800">
+                  <div class="flex justify-between py-2 border-b"><span>建物面積</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>間取り</span><span id="build_madori">—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>総戸数</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>完成時期</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>建物状況</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>引渡可能時期</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>主要構造/一部構造</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>工法</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>建物階建て</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>駐車場</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>施工会社</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>建築確認番号</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b"><span>エネルギー/断熱</span><span>—</span></div>
+                  <div class="flex justify-between py-2 border-b md:col-span-2"><span>目安光熱費/外装/内装リフォーム</span><span>—</span></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow" id="sec-restrict">
+              <div class="p-6 border-b"><h2 class="text-xl font-bold text-blue-900">制限事項</h2></div>
+              <div class="p-6">
+                <div class="text-gray-800">法令上の制限: —</div>
+                <div class="text-gray-800 mt-2">その他制限事項: —</div>
+              </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow" id="sec-features">
+              <div class="p-6 border-b"><h2 class="text-xl font-bold text-blue-900">特徴・設備</h2></div>
+              <div class="p-6">
+                <ul class="flex flex-wrap gap-2 text-sm text-gray-800">
+                  <li class="px-3 py-1 rounded-full bg-gray-100">—</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow" id="sec-events">
+              <div class="p-6 border-b"><h2 class="text-xl font-bold text-blue-900">イベント情報</h2></div>
+              <div class="p-6 text-gray-800">—</div>
+            </section>
+          </div>
+
+          <!-- サイド -->
+          <aside class="lg:col-span-1 space-y-6">
+            <div class="bg-white rounded-xl shadow p-6">
+              <div class="text-gray-700 space-y-2">
+                <div class="flex justify-between"><span>価格</span><span id="side_price" class="text-red-600 font-bold">—</span></div>
+                <div class="flex justify-between"><span>所在地</span><span id="side_address">—</span></div>
+                <div class="flex justify-between"><span>間取り</span><span id="side_madori">—</span></div>
+              </div>
+              <a href="./suumo-entry-demo.html" class="mt-4 block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">編集する（デモ）</a>
+            </div>
+            <div class="bg-white rounded-xl shadow p-6">
+              <h3 class="font-bold text-blue-900 mb-3">お問い合わせ</h3>
+              <div class="space-y-2 text-gray-800 text-sm">
+                <div>電話: 096-383-2001（熊本）</div>
+                <div>電話: 092-985-8111（福岡）</div>
+                <a href="../contact.html" class="inline-block mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded">この物件に問い合わせる</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <div data-include="../../partials/footer.html" data-base="../.."></div>
+    </div>
+
+    <script>
+      // Map loaded values to sections after header render
+      document.addEventListener('DOMContentLoaded', function(){
+        var t = document.getElementById('propTitle')?.textContent || '';
+        var p = document.getElementById('propPrice')?.textContent || '';
+        var a = document.getElementById('propAddress')?.textContent || '';
+        var m = document.getElementById('propMadori')?.textContent || '';
+        document.getElementById('basic_address').textContent = a || '—';
+        document.getElementById('basic_name').textContent = t || '—';
+        document.getElementById('price_value').textContent = p || '—';
+        document.getElementById('build_madori').textContent = m || '—';
+        document.getElementById('side_price').textContent = p || '—';
+        document.getElementById('side_address').textContent = a || '—';
+        document.getElementById('side_madori').textContent = m || '—';
+      });
+    </script>
+  </body>
+  </html>
+

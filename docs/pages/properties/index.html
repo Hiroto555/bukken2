@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="../../assets/media/028c0d39d2e8f589-s.p.woff2" as="font" crossorigin type="font/woff2" />
+    <link rel="preload" href="../../assets/media/5b01f339abf2f1a5.p.woff2" as="font" crossorigin type="font/woff2" />
+    <link rel="preload" href="../../assets/media/f2dba9fbcf2f771b-s.p.woff2" as="font" crossorigin type="font/woff2" />
+    <link rel="stylesheet" href="../../assets/css/ea79b3adb3d66b3d.css" data-precedence="next" />
+    <link rel="stylesheet" href="../../assets/css/b5d7c1d9562874f8.css" data-precedence="next" />
+    <script src="../../assets/js/include-partials.js" defer></script>
+    <title>物件一覧 | ゆめハウス</title>
+    <meta name="description" content="ゆめハウスの物件一覧ページ" />
+  </head>
+  <body>
+    <div class="min-h-screen bg-white __className_39a0a9">
+      <div data-include="../../partials/header.html" data-base="../.."></div>
+
+      <section class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+          <h1 class="text-3xl md:text-4xl font-bold">物件一覧</h1>
+          <p class="mt-2 text-white/90">熊本・福岡エリアの厳選物件</p>
+        </div>
+      </section>
+
+      <main class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="bg-white rounded-xl shadow p-4 md:p-6 mb-8">
+            <form class="grid md:grid-cols-4 gap-4">
+              <div>
+                <label class="block text-sm font-medium mb-1">物件タイプ</label>
+                <select class="w-full border rounded px-3 py-2">
+                  <option>すべて</option>
+                  <option>マンション</option>
+                  <option>一戸建て</option>
+                  <option>土地</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1">エリア</label>
+                <select class="w-full border rounded px-3 py-2">
+                  <option>すべて</option>
+                  <option>熊本市</option>
+                  <option>福岡市</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1">価格（上限・万円）</label>
+                <input type="number" class="w-full border rounded px-3 py-2" placeholder="5000" />
+              </div>
+              <div class="flex items-end">
+                <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">検索</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <a href="./detail.html" class="group block bg-white rounded-xl shadow overflow-hidden">
+              <div class="h-48 bg-gray-200">
+                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="物件画像" />
+              </div>
+              <div class="p-4">
+                <div class="flex items-baseline justify-between">
+                  <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-900">熊本市東区・新築戸建</h3>
+                  <span class="text-red-600 font-bold text-xl">3,980<span class="text-sm">万円</span></span>
+                </div>
+                <div class="mt-2 text-gray-600 text-sm">3LDK / 95.2㎡ / 新築</div>
+                <div class="mt-1 text-gray-500 text-sm">熊本県熊本市東区</div>
+              </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="./detail.html" class="group block bg-white rounded-xl shadow overflow-hidden">
+              <div class="h-48 bg-gray-200">
+                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?q=80&w=1200&auto=format&fit=crop" alt="物件画像" />
+              </div>
+              <div class="p-4">
+                <div class="flex items-baseline justify-between">
+                  <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-900">福岡市中央区・中古マンション</h3>
+                  <span class="text-red-600 font-bold text-xl">2,780<span class="text-sm">万円</span></span>
+                </div>
+                <div class="mt-2 text-gray-600 text-sm">2LDK / 65.0㎡ / 築3年</div>
+                <div class="mt-1 text-gray-500 text-sm">福岡県福岡市中央区</div>
+              </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="./detail.html" class="group block bg-white rounded-xl shadow overflow-hidden">
+              <div class="h-48 bg-gray-200">
+                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop" alt="物件画像" />
+              </div>
+              <div class="p-4">
+                <div class="flex items-baseline justify-between">
+                  <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-900">福岡市城南区・新築戸建</h3>
+                  <span class="text-red-600 font-bold text-xl">4,580<span class="text-sm">万円</span></span>
+                </div>
+                <div class="mt-2 text-gray-600 text-sm">4LDK / 110.3㎡ / 新築</div>
+                <div class="mt-1 text-gray-500 text-sm">福岡県福岡市城南区</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <div data-include="../../partials/footer.html" data-base="../.."></div>
+    </div>
+  </body>
+  </html>
+
