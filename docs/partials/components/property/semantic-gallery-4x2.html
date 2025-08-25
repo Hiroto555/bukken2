@@ -13,7 +13,8 @@
     .property-semantic-gallery .psg-figcaption { position: static; padding: 8px 4px 0 4px; background: transparent; color: var(--text-primary,#333); }
     .property-semantic-gallery .psg-cap-title { font-weight: 700; font-size: 14px; color: var(--text-strong,#222); margin: 0 0 4px; text-shadow: none; }
     .property-semantic-gallery .psg-cap-desc { margin: 0; font-size: 12px; color: var(--text-secondary,#666); line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 8; -webkit-box-orient: vertical; overflow: hidden; }
-    @media (max-width: 1024px) { .property-semantic-gallery .psg-container { grid-template-columns: 1fr 1fr; gap: 10px; } }
+    /* Keep 4 columns down to 900px to確実に2段構成に */
+    @media (max-width: 900px) { .property-semantic-gallery .psg-container { grid-template-columns: 1fr 1fr; gap: 10px; } }
     @media (max-width: 768px) { .property-semantic-gallery .psg-container { gap: 8px; } }
   </style>
   <div class="psg-header">
