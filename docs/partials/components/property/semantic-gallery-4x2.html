@@ -10,6 +10,9 @@
       width: 100%; max-width: none; padding: 0; background: transparent;
     }
     .property-semantic-gallery .psg-figure { border: none; box-shadow: none; border-radius: 6px; background: transparent; }
+    /* Disable hover effects for this gallery */
+    .property-semantic-gallery .psg-figure:hover,
+    .property-semantic-gallery .psg-figure:focus-within { box-shadow: none !important; transform: none !important; border-color: transparent !important; }
     .property-semantic-gallery .psg-figcaption { position: static; padding: 8px 4px 0 4px; background: transparent; color: var(--text-primary,#333); }
     .property-semantic-gallery .psg-cap-title { font-weight: 700; font-size: 14px; color: var(--text-strong,#222); margin: 0 0 4px; text-shadow: none; }
     .property-semantic-gallery .psg-cap-desc { margin: 0; font-size: 12px; color: var(--text-secondary,#666); line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 8; -webkit-box-orient: vertical; overflow: hidden; }
