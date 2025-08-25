@@ -383,7 +383,7 @@
       }
       
       .nav-tab.active {
-        background: var(--jp-primary);
+        background: var(--jp-navy);
         color: white;
         font-weight: 600;
       }
@@ -400,16 +400,8 @@
         color: var(--jp-primary);
       }
       
-      .nav-tab.special {
-        background: var(--jp-navy);
-        color: white;
-        font-weight: 600;
-        border-radius: 0 6px 0 0;
-      }
-      
-      .nav-tab.special:hover {
-        background: #4a7d30;
-      }
+      /* special タブも通常は inactive と同様。選択時のみ .active で紺色 */
+      .nav-tab.special { border-radius: 0 6px 0 0; }
       
       .nav-tab.active:first-child {
         border-right: 1px solid rgba(255,255,255,0.2);
@@ -1951,7 +1943,7 @@
           // Reset all nav-tab states
           tabs.forEach(t => {
             t.classList.remove('active');
-            if (!t.classList.contains('special')) t.classList.add('inactive');
+            t.classList.add('inactive');
           });
           const current = document.querySelector(`.property-nav-tabs .nav-tab[data-target="${name}"]`);
           if (current) {
