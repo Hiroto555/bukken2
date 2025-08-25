@@ -2,9 +2,19 @@
 <link rel="stylesheet" href="{{BASE}}/assets/css/property-gallery.css" />
 <section class="property-semantic-gallery" aria-labelledby="psg-title">
   <style>
-    /* Override to 4 columns on desktop for this partial only */
-    .property-semantic-gallery .psg-container { grid-template-columns: repeat(4, 1fr); max-width: none; padding: 0 16px 16px 16px; }
-    @media (max-width: 1024px) { .property-semantic-gallery .psg-container { grid-template-columns: 1fr 1fr; } }
+    /* 4x2 wide variant: use full available width and place captions below */
+    .property-semantic-gallery { background: transparent; box-shadow: none; border-radius: 0; padding: 0; }
+    .property-semantic-gallery .psg-header { background: transparent; padding: 12px 0 8px 0; }
+    .property-semantic-gallery .psg-container { 
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; 
+      width: 100%; max-width: none; padding: 0; background: transparent;
+    }
+    .property-semantic-gallery .psg-figure { border: none; box-shadow: none; border-radius: 6px; background: transparent; }
+    .property-semantic-gallery .psg-figcaption { position: static; padding: 8px 4px 0 4px; background: transparent; color: var(--text-primary,#333); }
+    .property-semantic-gallery .psg-cap-title { font-weight: 700; font-size: 14px; color: var(--text-strong,#222); margin: 0 0 4px; text-shadow: none; }
+    .property-semantic-gallery .psg-cap-desc { margin: 0; font-size: 12px; color: var(--text-secondary,#666); line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 8; -webkit-box-orient: vertical; overflow: hidden; }
+    @media (max-width: 1024px) { .property-semantic-gallery .psg-container { grid-template-columns: 1fr 1fr; gap: 10px; } }
+    @media (max-width: 768px) { .property-semantic-gallery .psg-container { gap: 8px; } }
   </style>
   <div class="psg-header">
     <h2 id="psg-title">フォトギャラリー</h2>
@@ -24,7 +34,7 @@
       </div>
       <figcaption class="psg-figcaption">
         <div class="psg-cap-title">LDK（約18帖）</div>
-        <div class="psg-cap-desc">南向きの明るいリビング。家族が集まる快適空間です。</div>
+        <div class="psg-cap-desc">南向きの明るいリビング。家族が集まる快適空間です。ワイドサッシが光と風を取り込み、季節の移ろいを室内に感じられます。家具配置がしやすい整形空間で、在宅ワークや学習スペースも確保しやすい間取りです。</div>
       </figcaption>
     </figure>
     <!-- 2 -->
@@ -39,7 +49,7 @@
       </div>
       <figcaption class="psg-figcaption">
         <div class="psg-cap-title">外観</div>
-        <div class="psg-cap-desc">落ち着いた色合いの外観。前面道路6mで駐車もラクラク。</div>
+        <div class="psg-cap-desc">落ち着いた色合いの外観。前面道路6mで駐車もラクラク。雨の日も濡れにくい庇付きアプローチで、荷物の出し入れもスムーズ。植栽スペースを設け、四季の彩りを感じられる玄関周りに仕上げています。</div>
       </figcaption>
     </figure>
     <!-- 3 -->
@@ -54,7 +64,7 @@
       </div>
       <figcaption class="psg-figcaption">
         <div class="psg-cap-title">キッチン</div>
-        <div class="psg-cap-desc">対面式で家族の様子が見える設計。収納も豊富です。</div>
+        <div class="psg-cap-desc">対面式で家族の様子が見える設計。収納も豊富です。食器洗乾燥機・浄水器一体型水栓・静音シンクを備え、家事の時短と快適性を両立。背面収納と可動棚でパントリー的な使い方も可能です。</div>
       </figcaption>
     </figure>
     <!-- 4 -->
@@ -69,7 +79,7 @@
       </div>
       <figcaption class="psg-figcaption">
         <div class="psg-cap-title">バスルーム</div>
-        <div class="psg-cap-desc">浴室乾燥機付きで雨の日も安心。1坪タイプでゆったり。</div>
+        <div class="psg-cap-desc">浴室乾燥機付きで雨の日も安心。1坪タイプでゆったり。保温浴槽と節水シャワーで光熱費にも配慮し、手すりを標準装備して幅広い世代に優しい仕様です。</div>
       </figcaption>
     </figure>
     <!-- 5 -->
@@ -84,7 +94,7 @@
       </div>
       <figcaption class="psg-figcaption">
         <div class="psg-cap-title">庭</div>
-        <div class="psg-cap-desc">南側の専用庭。ガーデニングやお子様の遊び場に。</div>
+        <div class="psg-cap-desc">南側の専用庭。ガーデニングやお子様の遊び場に。ウッドデッキを設ければアウトドアリビングとしても活用でき、休日のBBQやプール遊びなど家時間がもっと楽しくなります。</div>
       </figcaption>
     </figure>
     <!-- 6 (repeat) -->
@@ -99,7 +109,7 @@
       </div>
       <figcaption class="psg-figcaption">
         <div class="psg-cap-title">LDK（約18帖）</div>
-        <div class="psg-cap-desc">南向きの明るいリビング。家族が集まる快適空間です。</div>
+        <div class="psg-cap-desc">南向きの明るいリビング。家族が集まる快適空間です。回遊動線で家事もしやすく、来客時にもゆったり過ごせるゆとりの広さを確保しています。</div>
       </figcaption>
     </figure>
     <!-- 7 (repeat) -->
@@ -114,7 +124,7 @@
       </div>
       <figcaption class="psg-figcaption">
         <div class="psg-cap-title">外観</div>
-        <div class="psg-cap-desc">落ち着いた色合いの外観。前面道路6mで駐車もラクラク。</div>
+        <div class="psg-cap-desc">落ち着いた色合いの外観。前面道路6mで駐車もラクラク。シンプルな意匠でありながら、長く愛せるベーシックなデザインです。</div>
       </figcaption>
     </figure>
     <!-- 8 (repeat) -->
@@ -129,7 +139,7 @@
       </div>
       <figcaption class="psg-figcaption">
         <div class="psg-cap-title">キッチン</div>
-        <div class="psg-cap-desc">対面式で家族の様子が見える設計。収納も豊富です。</div>
+        <div class="psg-cap-desc">対面式で家族の様子が見える設計。収納も豊富です。調理動線が短く作業台も広いので、複数人での料理もスムーズに行えます。</div>
       </figcaption>
     </figure>
   </div>
