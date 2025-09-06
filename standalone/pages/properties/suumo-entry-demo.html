@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="../../assets/fonts/028c0d39d2e8f589-s.p.woff2" as="font" crossorigin type="font/woff2" />
+    <link rel="preload" href="../../assets/fonts/5b01f339abf2f1a5.p.woff2" as="font" crossorigin type="font/woff2" />
+    <link rel="preload" href="../../assets/fonts/f2dba9fbcf2f771b-s.p.woff2" as="font" crossorigin type="font/woff2" />
+    <link rel="stylesheet" href="../../assets/css/ea79b3adb3d66b3d.css" />
+    <link rel="stylesheet" href="../../assets/css/b5d7c1d9562874f8.css" />
+    
+    <script src="../../assets/js/suumo-entry.js" defer></script>
+    <title>SUUMO風 物件登録デモ | ゆめハウス</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-50 __className_39a0a9">
+      <header class="sticky top-0 z-50 w-full">
+  <div class="bg-blue-700 text-white py-3 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col sm:flex-row gap-4 justify-end">
+        <a href="tel:096-383-2001" class="flex items-center gap-2 text-white hover:text-gray-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-5 h-5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span class="text-lg font-bold">熊本店: 096-383-2001</span>
+        </a>
+        <a href="tel:092-985-8111" class="flex items-center gap-2 text-white hover:text-gray-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-5 h-5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span class="text-lg font-bold">福岡店: 092-985-8111</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <a class="flex flex-col" href="../../">
+            <h1 class="text-2xl font-bold text-blue-900">ゆめハウス</h1>
+            <p class="text-sm text-gray-600">株式会社Blooo</p>
+          </a>
+        </div>
+        <nav class="hidden lg:flex items-center gap-6">
+          <a class="text-gray-700 hover:text-blue-900 font-medium transition-colors" href="../../">ホーム</a>
+          <a class="text-gray-700 hover:text-blue-900 font-medium transition-colors" href="../../pages/about.html">会社概要</a>
+          <a class="text-gray-700 hover:text-blue-900 font-medium transition-colors" href="../../pages/branch.html">支店情報</a>
+          <a class="text-gray-700 hover:text-blue-900 font-medium transition-colors" href="../../pages/reason.html">選ばれる理由</a>
+          <a class="text-gray-700 hover:text-blue-900 font-medium transition-colors" href="../../pages/flow.html">ご利用の流れ</a>
+          <a class="text-gray-700 hover:text-blue-900 font-medium transition-colors" href="../../pages/testimonials.html">お客様の声</a>
+          <a class="text-gray-700 hover:text-blue-900 font-medium transition-colors" href="../../pages/questions.html">よくある質問</a>
+          <a class="text-gray-700 hover:text-blue-900 font-medium transition-colors" href="../../pages/properties/index.html">物件一覧</a>
+        </nav>
+        <div class="hidden lg:block">
+          <a href="../../pages/contact.html">
+            <button class="inline-flex items-center justify-center gap-2 h-10 bg-white hover:bg-gray-100 text-red-600 px-6 py-2 text-base font-bold border-2 border-red-600 rounded-md transition-colors">お問い合わせはこちら</button>
+          </a>
+        </div>
+        <button class="lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="lg:hidden fixed bottom-4 right-4 z-50">
+    <a href="../../pages/contact.html">
+      <div class="bg-red-600 text-white p-4 rounded-full shadow-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-6 h-6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      </div>
+    </a>
+  </div>
+</header>
+
+
+
+      <section class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4">
+          <h1 class="text-3xl md:text-4xl font-bold">SUUMO風 物件情報登録（デモ）</h1>
+          <p class="mt-2 text-white/90">Suumo物件登録.md の各項目をUI化したデモです</p>
+        </div>
+      </section>
+
+      <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- セクションタブ -->
+        <div class="sticky top-16 z-40 bg-white/90 backdrop-blur rounded-md shadow p-2 mb-6">
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2">
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="basic">1. 基本情報</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="staff">2. 担当者</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="price">3. 価格</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="land">4. 土地</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="building">5. 建物</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="restrictions">6. 制限事項</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="biz">7. 投資・事業用</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="features">8. 特徴設備</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="catch">9. キャッチ</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="support">10. 購入サポート</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="events">11. イベント</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="drawings">12. 図面登録</button>
+            <button class="px-3 py-2 rounded text-sm font-bold bg-white text-blue-700 border" data-tab-target="publish">13. 掲載指示</button>
+          </div>
+        </div>
+
+        <div id="suumoFormTop"></div>
+
+        <!-- 1. 基本情報 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6" data-tab="basic">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">1. 基本情報</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="font-semibold">種別 <span class="text-red-600">必須</span></label>
+              <div class="mt-2 flex gap-6 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="property_type"> 一戸建て</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="property_type"> テラスハウス</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">物件名 <span class="text-red-600">必須</span></label>
+              <input id="fld_property_name" class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="物件名を入力してください" data-count-max="42" data-count-out="cnt_property_name" data-required>
+              <p class="text-xs text-gray-600">文字数: <span id="cnt_property_name">0/42</span> ※ネットレポート掲載時のみ表示</p>
+            </div>
+            <div>
+              <label class="font-semibold">郵便番号</label>
+              <div class="mt-2 flex gap-2"><input class="w-48 border rounded px-3 py-2" type="text" placeholder="123-4567"><button class="px-4 py-2 bg-gray-200 rounded">郵便番号検索</button></div>
+            </div>
+            <div>
+              <label class="font-semibold">フリーワード検索</label>
+              <div class="mt-2 flex gap-2"><input class="w-full border rounded px-3 py-2" type="text" placeholder="住所の一部を入力してください"><button class="px-4 py-2 bg-gray-200 rounded">フリーワード</button></div>
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">物件所在地 <span class="text-red-600">必須</span></label>
+              <div class="mt-2 grid md:grid-cols-4 gap-3">
+                <select id="fld_pref" class="border rounded px-3 py-2" data-required>
+                  <option value="">都道府県</option>
+                  <option>熊本県</option>
+                  <option>福岡県</option>
+                  <option>東京都</option>
+                  <option>神奈川県</option>
+                </select>
+                <input id="fld_city" class="border rounded px-3 py-2" type="text" placeholder="市区部" data-required>
+                <input id="fld_town" class="border rounded px-3 py-2" type="text" placeholder="町村">
+                <input id="fld_addr_no" class="border rounded px-3 py-2" type="text" placeholder="番地">
+              </div>
+              <p class="text-xs text-gray-600 mt-1">※楽天Tがない住所の場合は「ブランク」を選択してください。</p>
+            </div>
+            <div>
+              <label class="font-semibold">住所表記 <span class="text-red-600">必須</span></label>
+              <input id="fld_addr_display" class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="以降の住所を入力してください" data-count-max="50" data-count-out="cnt_addr" data-required>
+              <div class="flex items-center gap-3 mt-1">
+                <p class="text-xs text-gray-600">文字数: <span id="cnt_addr">0/50</span></p>
+                <label class="text-sm"><input type="checkbox"> 住所未届をネットに公開</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">号棟</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="号棟名を入力してください" data-count-max="50" data-count-out="cnt_bname">
+              <p class="text-xs text-gray-600">文字数: <span id="cnt_bname">0/50</span> ※表示されません</p>
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">周辺環境地図</label>
+              <div class="mt-2 flex flex-wrap gap-3 items-center">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded">位置確認・修正</button>
+                <p class="text-xs text-gray-600">※「らくらく交通入力」は必ず物件位置の確認・修正後に使用</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. 担当者情報 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="staff">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">2. 担当者情報</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="font-semibold">問い合わせ先担当者</label>
+              <div class="mt-2 flex gap-4 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="staff_sel"> 選択する</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="staff_sel" checked> 編集する</label>
+              </div>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="担当者選択">
+              <p class="text-xs text-gray-600 mt-1">※未指定の場合は表示されません。直接入力するとリンクが設定されません。</p>
+            </div>
+            <div>
+              <label class="font-semibold">スタッフからのコメント</label>
+              <textarea class="mt-2 w-full border rounded px-3 py-2" rows="4" placeholder="入力してください" data-count-max="100" data-count-out="cnt_staff_comment"></textarea>
+              <p class="text-xs text-gray-600">文字数: <span id="cnt_staff_comment">0/100</span> ※未入力だと「スタッフPR」の掲載指示不可</p>
+            </div>
+            <div>
+              <label class="font-semibold">資社ご担当（表示されません）</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="入力してください" data-count-max="10" data-count-out="cnt_company_staff">
+              <p class="text-xs text-gray-600">文字数: <span id="cnt_company_staff">0/10</span></p>
+            </div>
+            <div>
+              <label class="font-semibold">資社物件コード</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="入力してください" data-count-max="30" data-count-out="cnt_property_code">
+              <p class="text-xs text-gray-600">文字数: <span id="cnt_property_code">0/30</span></p>
+            </div>
+            <div>
+              <label class="font-semibold">社内メモ1（表示されません）</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="入力してください" data-count-max="20" data-count-out="cnt_memo1">
+              <p class="text-xs text-gray-600">文字数: <span id="cnt_memo1">0/20</span></p>
+            </div>
+            <div>
+              <label class="font-semibold">社内メモ2（表示されません）</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="入力してください" data-count-max="20" data-count-out="cnt_memo2">
+              <p class="text-xs text-gray-600">文字数: <span id="cnt_memo2">0/20</span></p>
+            </div>
+            <div>
+              <label class="font-semibold">一括入物物件コード（表示されません）</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="選択してください">
+            </div>
+            <div>
+              <label class="font-semibold">管社スタッフコード（表示されません）</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="選択してください">
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">関連ホームページURL</label>
+              <div class="mt-2 space-y-2">
+                <!-- 1..5 -->
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="text-sm text-gray-600 w-28">リンク名1</span>
+                  <input class="border rounded px-3 py-2 flex-1 min-w-[160px]" type="text">
+                  <span class="text-sm text-gray-600 w-24">URL1</span>
+                  <input class="border rounded px-3 py-2 flex-[2] min-w-[220px]" type="url" placeholder="https://">
+                  <a class="px-3 py-2 bg-gray-200 rounded" href="#" target="_blank">リンク先へ</a>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="text-sm text-gray-600 w-28">リンク名2</span>
+                  <input class="border rounded px-3 py-2 flex-1 min-w-[160px]" type="text">
+                  <span class="text-sm text-gray-600 w-24">URL2</span>
+                  <input class="border rounded px-3 py-2 flex-[2] min-w-[220px]" type="url" placeholder="https://">
+                  <a class="px-3 py-2 bg-gray-200 rounded" href="#" target="_blank">リンク先へ</a>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="text-sm text-gray-600 w-28">リンク名3</span>
+                  <input class="border rounded px-3 py-2 flex-1 min-w-[160px]" type="text">
+                  <span class="text-sm text-gray-600 w-24">URL3</span>
+                  <input class="border rounded px-3 py-2 flex-[2] min-w-[220px]" type="url" placeholder="https://">
+                  <a class="px-3 py-2 bg-gray-200 rounded" href="#" target="_blank">リンク先へ</a>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="text-sm text-gray-600 w-28">リンク名4</span>
+                  <input class="border rounded px-3 py-2 flex-1 min-w-[160px]" type="text">
+                  <span class="text-sm text-gray-600 w-24">URL4</span>
+                  <input class="border rounded px-3 py-2 flex-[2] min-w-[220px]" type="url" placeholder="https://">
+                  <a class="px-3 py-2 bg-gray-200 rounded" href="#" target="_blank">リンク先へ</a>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="text-sm text-gray-600 w-28">リンク名5</span>
+                  <input class="border rounded px-3 py-2 flex-1 min-w-[160px]" type="text">
+                  <span class="text-sm text-gray-600 w-24">URL5</span>
+                  <input class="border rounded px-3 py-2 flex-[2] min-w-[220px]" type="url" placeholder="https://">
+                  <a class="px-3 py-2 bg-gray-200 rounded" href="#" target="_blank">リンク先へ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. 価格 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="price">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">3. 価格</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="font-semibold">価格 <span class="text-red-600">必須</span></label>
+              <div class="mt-2 flex items-center gap-2">
+                <input id="fld_price" class="w-40 border rounded px-3 py-2" type="number" step="0.1" placeholder="19000.5" data-required>
+                <span>万円</span>
+              </div>
+              <p class="text-xs text-gray-600 mt-1">※千円単位まで。例）190,005,000円 → 19000.5</p>
+            </div>
+            <div>
+              <label class="font-semibold">町会費など</label>
+              <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="town_fee"> 町会費</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="town_fee"> 町内会費</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="town_fee"> 自治会費</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="town_fee" checked> 未選択</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">有線放送に係る費用（設当必須）</label>
+              <div class="mt-2 flex gap-6 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="cable_fee" checked> 無</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="cable_fee"> 有</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">インターネットに係る費用（設当必須）</label>
+              <div class="mt-2 flex gap-6 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="internet_fee" checked> 無</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="internet_fee"> 有</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">CATVに係る費用（設当必須）</label>
+              <div class="mt-2 flex gap-6 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="catv_fee" checked> 無</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="catv_fee"> 有</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">温泉（設当必須）</label>
+              <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="onsen"> 温泉使用料</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="onsen"> 温泉権利金</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="onsen" checked> 未選択</label>
+              </div>
+            </div>
+            <div class="md:col-span-2 grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="font-semibold">その他費用1（設当必須）</label>
+                <div class="mt-2 grid grid-cols-5 gap-2 items-center">
+                  <input class="col-span-2 border rounded px-3 py-2" type="text" placeholder="名称を入力してください">
+                  <input class="col-span-2 border rounded px-3 py-2" type="number" placeholder="金額">
+                  <select class="col-span-1 border rounded px-2 py-2">
+                    <option>未選択</option><option>月</option><option>年</option><option>一括</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="font-semibold">その他費用2（設当必須）</label>
+                <div class="mt-2 grid grid-cols-5 gap-2 items-center">
+                  <input class="col-span-2 border rounded px-3 py-2" type="text" placeholder="名称を入力してください">
+                  <input class="col-span-2 border rounded px-3 py-2" type="number" placeholder="金額">
+                  <select class="col-span-1 border rounded px-2 py-2">
+                    <option>未選択</option><option>月</option><option>年</option><option>一括</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">取引にかかる費用（仲介手数料、登記費用等）</label>
+              <textarea class="mt-2 w-full border rounded px-3 py-2" rows="3" placeholder="なし"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. 土地情報 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="land">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">4. 土地情報</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="font-semibold">土地面積 <span class="text-red-600">必須</span></label>
+              <div class="mt-2 flex flex-wrap items-center gap-3 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="land_area_type"> 登記</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="land_area_type"> 実測</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="land_area_type" checked> 未選択</label>
+              </div>
+              <div class="mt-2 flex items-center gap-2">
+                <input class="w-24 border rounded px-3 py-2" type="number" step="1" placeholder="0">
+                <span>.</span>
+                <input class="w-20 border rounded px-3 py-2" type="number" step="1" placeholder="0">
+                <span>m²</span>
+              </div>
+              <div class="mt-3 space-y-2 text-sm">
+                <div class="flex items-center gap-2"><span>> うち関務部分</span><input class="w-20 border rounded px-2 py-1" type="number"><span>.</span><input class="w-16 border rounded px-2 py-1" type="number"></div>
+                <div class="flex items-center gap-2"><span>> うち敷地状部分</span><input class="w-20 border rounded px-2 py-1" type="number"><span>.</span><input class="w-16 border rounded px-2 py-1" type="number"><select class="border rounded px-2 py-1"><option>未選択</option><option>㎡</option><option>%</option></select></div>
+                <div class="flex items-center gap-2"><span>> うち高圧線下</span><input class="w-20 border rounded px-2 py-1" type="number"><span>.</span><input class="w-16 border rounded px-2 py-1" type="number"><span>m²</span></div>
+              </div>
+            </div>
+            <div class="grid gap-4">
+              <div class="flex items-center gap-2"><label class="w-24 font-semibold">建ぺい率</label><input class="w-24 border rounded px-3 py-2" type="number"><span>%</span></div>
+              <div class="flex items-center gap-2"><label class="w-24 font-semibold">容積率</label><input class="w-24 border rounded px-3 py-2" type="number"><span>%</span></div>
+              <div>
+                <label class="font-semibold">私道負担（設当必須）</label>
+                <div class="mt-2 flex gap-6 text-sm">
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="private_road" checked> 無</label>
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="private_road"> 有</label>
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="private_road"> 共有</label>
+                </div>
+              </div>
+              <div>
+                <label class="font-semibold">地役権（設当必須）</label>
+                <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="easement" checked> 無</label>
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="easement"> 地役権</label>
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="easement"> 通行地役権</label>
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="easement"> 引水地役権</label>
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="easement"> 眺望地役権</label>
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="easement"> 通路賃借権</label>
+                  <label class="inline-flex items-center gap-2"><input type="radio" name="easement"> 未選択</label>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-2 grid md:grid-cols-3 gap-4">
+              <div><label class="font-semibold">前面道路1 向き</label><select class="mt-2 w-full border rounded px-3 py-2"><option>選択してください</option></select></div>
+              <div><label class="font-semibold">前面道路2 向き</label><select class="mt-2 w-full border rounded px-3 py-2"><option>選択してください</option></select></div>
+              <div><label class="font-semibold">前面道路3 向き</label><select class="mt-2 w-full border rounded px-3 py-2"><option>選択してください</option></select></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4 md:col-span-2">
+              <div>
+                <label class="font-semibold">上水道</label>
+                <select class="mt-2 w-full border rounded px-3 py-2"><option>未選択</option><option>公営水道</option><option>私設水道</option><option>井戸</option></select>
+              </div>
+              <div>
+                <label class="font-semibold">下水道</label>
+                <select class="mt-2 w-full border rounded px-3 py-2"><option>未選択</option><option>本下水</option><option>集中浄化槽</option><option>個別浄化槽</option></select>
+              </div>
+              <div>
+                <label class="font-semibold">ガス・オール電化</label>
+                <select class="mt-2 w-full border rounded px-3 py-2"><option>未選択</option><option>都市ガス</option><option>集中LPG</option><option>個別LPG</option><option>オール電化</option></select>
+              </div>
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">セットバック（設当必須）</label>
+              <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="setback" checked> 不要</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="setback"> 要</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="setback"> 済</label>
+                <input class="border rounded px-3 py-2" type="text" placeholder="選択してください">
+              </div>
+            </div>
+            <div class="md:col-span-2 grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="font-semibold">用途地域</label>
+                <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="選択してください">
+              </div>
+              <div>
+                <label class="font-semibold">用途地域2（複数指定時）</label>
+                <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="選択してください">
+              </div>
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">建築許可理由（設当必須）</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="入力してください">
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. 建物情報 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="building">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">5. 建物情報</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="font-semibold">建物面積 <span class="text-red-600">必須</span></label>
+              <div class="mt-2 flex flex-wrap items-center gap-3 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="b_area_type"> 登記</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="b_area_type"> 実測</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="b_area_type" checked> 未選択</label>
+              </div>
+              <div class="mt-2 flex items-center gap-2">
+                <input class="w-24 border rounded px-3 py-2" type="number"><span>.</span><input class="w-20 border rounded px-3 py-2" type="number"><span>m²</span>
+              </div>
+              <div class="mt-3 space-y-2 text-sm">
+                <div class="flex items-center gap-2"><span>> うち地下室</span><input class="w-20 border rounded px-2 py-1" type="number"><span>.</span><input class="w-16 border rounded px-2 py-1" type="number"><span>m²</span></div>
+                <div class="flex items-center gap-2"><span>> うち1F車庫</span><input class="w-20 border rounded px-2 py-1" type="number"><span>.</span><input class="w-16 border rounded px-2 py-1" type="number"><span>m²</span></div>
+                <div class="flex items-center gap-2"><span>> うち地下車庫</span><input class="w-20 border rounded px-2 py-1" type="number"><span>.</span><input class="w-16 border rounded px-2 py-1" type="number"><span>m²</span></div>
+                <div class="flex items-center gap-2"><span>> うち居住用途以外</span>
+                  <select class="border rounded px-2 py-1"><option>選択してください</option><option>店舗</option><option>事務所</option><option>その他</option></select>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">間取りタイプ <span class="text-red-600">必須</span></label>
+              <div class="mt-2 grid grid-cols-3 gap-2 items-center">
+                <input id="fld_rooms_num" class="border rounded px-3 py-2" type="number" placeholder="部屋数">
+                <select id="fld_rooms_type" class="border rounded px-2 py-2"><option>タイプ</option><option>R</option><option>K</option><option>DK</option><option>LDK</option></select>
+                <select id="fld_rooms_type2" class="border rounded px-2 py-2"><option>追加</option><option>K</option><option>DK</option><option>LDK</option></select>
+              </div>
+              <p class="text-xs text-gray-600">2世帯住宅は合算で入力（例: 3LDK＋2DK → 5LDDKK）</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 md:col-span-2">
+              <div><label class="font-semibold">総戸数</label><div class="mt-2 flex items-center gap-2"><input class="w-24 border rounded px-3 py-2" type="number"><span>戸</span></div></div>
+              <div>
+                <label class="font-semibold">完成時期 <span class="text-red-600">必須</span></label>
+                <div class="mt-2 flex items-center gap-2"><input class="w-24 border rounded px-3 py-2" type="number" placeholder="年"><input class="w-20 border rounded px-3 py-2" type="number" placeholder="月"></div>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">建物状況 <span class="text-red-600">必須</span></label>
+              <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="b_status"> 新築</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="b_status"> 未入居</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="b_status"> 中古</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">引渡可能時期 <span class="text-red-600">必須</span></label>
+              <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="delivery"> 即引渡可</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="delivery"> 相談</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="delivery"> 指定有</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="delivery"> 契約後</label>
+              </div>
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">主要構造 <span class="text-red-600">必須</span></label>
+              <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> RC</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> SRC</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 木造</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 鉄骨</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 軽量鉄骨</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> PC</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> HPC</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> ALC</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> その他</label>
+              </div>
+              <div class="mt-3">
+                <label class="font-semibold">構造（一部）</label>
+                <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> RC</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> SRC</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> 木造</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> 鉄骨</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> 軽量鉄骨</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> PC</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> HPC</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> ALC</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> その他</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox"> 無し</label>
+                </div>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 md:col-span-2">
+              <div>
+                <label class="font-semibold">工法</label>
+                <select class="mt-2 w-full border rounded px-3 py-2"><option>選択してください</option></select>
+              </div>
+              <div>
+                <label class="font-semibold">建物階建て <span class="text-red-600">必須</span></label>
+                <div class="mt-2 flex items-center gap-2 text-sm">地上 <input class="w-16 border rounded px-2 py-1" type="number"> 階 地下 <input class="w-16 border rounded px-2 py-1" type="number"> 階建</div>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">駐車場</label>
+              <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="parking"> 車庫</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="parking"> 地下車庫</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="parking"> カースペース</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="parking"> カーポート</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="parking"> 無</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="parking" checked> 未選択</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">施工会社</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="入力してください">
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">建築確認番号 <span class="text-red-600">設当必須</span></label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="第〇〇〇号">
+              <p class="text-xs text-gray-600 mt-1">※未完成物件は必須。番号が不明な場合は「第000号」など仮の形式も可（デモ表示）。</p>
+            </div>
+            <div>
+              <label class="font-semibold">エネルギー消費性能</label>
+              <div class="mt-2 flex gap-2"><select class="border rounded px-2 py-2"><option>選択してください</option><option>等級1</option><option>等級2</option><option>等級3</option></select><select class="border rounded px-2 py-2"><option>選択してください</option><option>認定取得済</option><option>認定予定</option></select></div>
+            </div>
+            <div>
+              <label class="font-semibold">断熱性能</label>
+              <select class="mt-2 w-full border rounded px-3 py-2"><option>選択してください</option><option>等級4</option><option>等級5</option><option>等級6</option><option>等級7</option></select>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 md:col-span-2">
+              <div>
+                <label class="font-semibold">目安光熱費</label>
+                <div class="mt-2 flex items-center gap-2"><input class="w-24 border rounded px-3 py-2" type="number"><span>〜</span><input class="w-24 border rounded px-3 py-2" type="number"><span>万円/年</span></div>
+              </div>
+              <div>
+                <label class="font-semibold">外装</label>
+                <div class="mt-2 flex gap-6 text-sm"><label class="inline-flex items-center gap-2"><input type="radio" name="exterior" checked> 無</label><label class="inline-flex items-center gap-2"><input type="radio" name="exterior"> 済</label><label class="inline-flex items-center gap-2"><input type="radio" name="exterior"> 完了予定</label></div>
+              </div>
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">リフォーム（内装）</label>
+              <div class="mt-2 flex gap-6 text-sm"><label class="inline-flex items-center gap-2"><input type="radio" name="reform_in" checked> 無</label><label class="inline-flex items-center gap-2"><input type="radio" name="reform_in"> 済</label><label class="inline-flex items-center gap-2"><input type="radio" name="reform_in"> 完了予定</label></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. 制限事項 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="restrictions">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">6. 制限事項</h2>
+          <div>
+            <label class="font-semibold">法令上の制限 <span class="text-red-600">詳当必須</span></label>
+            <div class="mt-2 grid sm:grid-cols-2 lg:grid-cols-3 gap-2 text-sm">
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 文化財保護法</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 古都保存法</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 景観法</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 砂防法</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 高度利用地区</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 協議地区</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 高層住居誘導地区</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 特別用途制限地域</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 建ぺい率最低限度有</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 一般都市計画道路</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 面積最低有</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 日照制限有</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 防火地域</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 準防火地域</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 農業振興地区</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 密集市街地整備法</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 都市再生特別地区</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 文教地区</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 高さ最低限度有</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 不整形地</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 航空法届出要</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 宅地造成工事規制区域</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 埋蔵文化財包蔵地</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 景観地区</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox"> 高圧線下</label>
+            </div>
+          </div>
+          <div class="mt-6">
+            <label class="font-semibold">その他制限事項 <span class="text-red-600">詳当必須</span></label>
+            <textarea class="mt-2 w-full border rounded px-3 py-2" rows="4" placeholder="その他の制限事項がある場合は350字以内で記入" data-count-max="350" data-count-out="cnt_other_rest"></textarea>
+            <p class="text-xs text-gray-600">文字数: <span id="cnt_other_rest">0/350</span></p>
+          </div>
+        </section>
+
+        <!-- 7. 投資・事業用 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="biz">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">7. 投資用・事業用</h2>
+          <p class="text-sm text-gray-600 mb-2">※HPサービスのみ掲載可。SUUMOネットには掲載不可。</p>
+          <label class="font-semibold">区分 <span class="text-red-600">必須</span></label>
+          <div class="mt-2 flex gap-6 text-sm">
+            <label class="inline-flex items-center gap-2"><input type="radio" name="biz_type" checked> 居住用</label>
+            <label class="inline-flex items-center gap-2"><input type="radio" name="biz_type"> 事業用</label>
+            <label class="inline-flex items-center gap-2"><input type="radio" name="biz_type"> 投資用</label>
+          </div>
+        </section>
+ 
+        <!-- 8. 特徴設備 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="features">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">8. 特徴設備</h2>
+          <p class="text-sm text-gray-600">「検査」マークの項目はSUUMOネットのこだわり検索条件です（デモでは表示のみ）。</p>
+          <div class="mt-4 grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">物件の性能</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 耐震基準適合証明書（中古）</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 建設住宅性能評価書（既存）</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 長期優良住宅認定通知書</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> フラット35・S適合</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 既存住宅売買瑕疵保険</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 適合リノベーション</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">立地・土地特徴</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 地盤調査済</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 角地</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 前面棟無</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 閑静な住宅地</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 土地100坪以上</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 高台に立地</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 区画整理地内</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 日当たり良好（土地）</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">日当・採光・通風</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 南向き</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 全室南向き</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 3面採光</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 通風良好</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 全室2面採光</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 南西向き</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">交通利便性</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 2沿線以上利用可</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">住戸・階数</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 2階建</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 3階建以上</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">キッチン</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> システムキッチン</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> IHクッキングヒーター</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 対面式キッチン</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 食器洗乾燥機</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> パントリー</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> アイランドキッチン</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 浄水器</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">浴室</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 浴室乾燥機</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 1坪以上</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 浴室に窓</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> ミストサウナ</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> ジェットバス</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">トイレ・洗面</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> シャワー付洗面化粧台</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 高機能トイレ</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> トイレ2ヶ所</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 温水洗浄便座</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">間取り</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> LDK20畳以上</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> LDK18畳以上</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> LDK15畳以上</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 全居室6畳以上</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 和室</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 2世帯住宅</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> ロフト</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 可動間仕切り</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">収納</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 全居室収納</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 床下収納</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 納戸</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> ウォークインクローゼット</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> シューズインクローク</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 物置</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">エコ関連</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 省エネ給湯器</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 太陽光発電システム</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> オール電化</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 複層ガラス</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 高気密高断熱住宅</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">テレビ・通信</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> BS・CS・CATV</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 高速ネット対応</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">駐車・駐輪</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 駐車2台可</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 駐車3台以上可</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> EV車充電設備</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> シャッター車庫</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> ビルトインガレージ</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> ハイルーフ駐車場</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">庭</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 庭</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 庭10坪以上</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 南庭</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">共用部</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> プール</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 共用露天風呂</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">管理・セキュリティ</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> セキュリティ充実</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> TVモニタ付インターホン</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 内外装リフォーム</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> フローリング張替</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. キャッチ -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="catch">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">9. キャッチ</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="font-semibold">メインキャッチ</label>
+              <textarea id="fld_main_catch" class="mt-2 w-full border rounded px-3 py-2" rows="3" placeholder="物件の魅力を端的に" data-count-max="100" data-count-out="cnt_main_catch"></textarea>
+              <p class="text-xs text-gray-600">文字数: <span id="cnt_main_catch">0/100</span></p>
+            </div>
+            <div>
+              <label class="font-semibold">サブキャッチ</label>
+              <textarea id="fld_sub_catch" class="mt-2 w-full border rounded px-3 py-2" rows="3" placeholder="補足情報や訴求点" data-count-max="150" data-count-out="cnt_sub_catch"></textarea>
+              <p class="text-xs text-gray-600">文字数: <span id="cnt_sub_catch">0/150</span></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. 購入サポート -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="support">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">10. 購入サポート</h2>
+          <p class="text-sm text-gray-600 mb-3">購入時のサポート体制を選択・入力（デモ用・保存無し）。</p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">サポート項目</h3>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 住宅ローンアドバイス</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> ファイナンシャルプラン相談</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> リフォーム提案</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> 引越し見積りサポート</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> アフターサービス</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox"> オンライン相談</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-blue-900 mb-2">備考</h3>
+              <textarea class="w-full border rounded px-3 py-2" rows="4" placeholder="サポート内容の補足があれば記載"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11. イベント -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="events">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">11. イベント</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="font-semibold">イベント名</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="text" placeholder="現地見学会 など">
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="font-semibold">開催日</label>
+                <input class="mt-2 w-full border rounded px-3 py-2" type="date">
+              </div>
+              <div>
+                <label class="font-semibold">時間</label>
+                <input class="mt-2 w-full border rounded px-3 py-2" type="time">
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">予約</label>
+              <div class="mt-2 flex gap-6 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="evt_res"> 要</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="evt_res" checked> 不要</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">イベントURL</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="url" placeholder="https://">
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">イベント説明</label>
+              <textarea class="mt-2 w-full border rounded px-3 py-2" rows="4" placeholder="開催内容、集合場所、持ち物など"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- 12. 図面登録 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="drawings">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">12. 図面登録</h2>
+          <p class="text-sm text-gray-600 mb-3">デモのためアップロード処理はありません。UIイメージのみ。</p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="font-semibold">間取り図</label>
+              <div class="mt-2 border rounded p-4 bg-gray-50 text-sm text-gray-700">ファイルをここにドラッグ＆ドロップ（デモ）</div>
+            </div>
+            <div>
+              <label class="font-semibold">現地案内図</label>
+              <div class="mt-2 border rounded p-4 bg-gray-50 text-sm text-gray-700">ファイルをここにドラッグ＆ドロップ（デモ）</div>
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">物件画像（最大30枚想定・デモ）</label>
+              <div class="mt-2 grid sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                <div class="aspect-video bg-gray-100 rounded border flex items-center justify-center text-gray-400">画像1</div>
+                <div class="aspect-video bg-gray-100 rounded border flex items-center justify-center text-gray-400">画像2</div>
+                <div class="aspect-video bg-gray-100 rounded border flex items-center justify-center text-gray-400">画像3</div>
+                <div class="aspect-video bg-gray-100 rounded border flex items-center justify-center text-gray-400">画像4</div>
+                <div class="aspect-video bg-gray-100 rounded border flex items-center justify-center text-gray-400">画像5</div>
+              </div>
+              <div class="mt-3"><button class="px-4 py-2 bg-gray-200 rounded">画像を追加（デモ）</button></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 13. 掲載指示 -->
+        <section class="bg-white rounded-xl shadow p-6 mb-6 hidden" data-tab="publish">
+          <h2 class="text-xl font-bold text-blue-900 mb-4">13. 掲載指示</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="font-semibold">掲載ステータス</label>
+              <div class="mt-2 flex gap-6 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="pub_status" checked> 下書き</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="pub_status"> 掲載依頼</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="pub_status"> 掲載停止</label>
+              </div>
+            </div>
+            <div>
+              <label class="font-semibold">希望掲載開始日</label>
+              <input class="mt-2 w-full border rounded px-3 py-2" type="date">
+            </div>
+            <div class="md:col-span-2">
+              <label class="font-semibold">掲載に関するメモ</label>
+              <textarea class="mt-2 w-full border rounded px-3 py-2" rows="4" placeholder="校正・公開タイミング・注意事項など"></textarea>
+            </div>
+            <div class="md:col-span-2 flex items-center gap-3">
+              <button class="px-5 py-2 rounded bg-gray-200">プレビュー（デモ）</button>
+              <button class="px-5 py-2 rounded bg-blue-600 text-white">掲載依頼を送信（デモ）</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="flex items-center justify-between mt-8">
+          <div class="text-sm text-gray-500">これはデモです。保存・公開は行いません。</div>
+          <div class="flex gap-3">
+            <button id="btnSaveDraft" class="px-5 py-2 rounded border">下書き保存（デモ）</button>
+            <button id="btnPreview" class="px-5 py-2 rounded bg-blue-600 text-white">入力内容を確認（デモ）</button>
+          </div>
+        </div>
+      
+      <!-- Preview Modal (demo) -->
+      <div id="previewModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4">
+        <div class="bg-white max-w-3xl w-full rounded-xl shadow-xl overflow-hidden">
+          <div class="flex items-center justify-between px-6 py-4 bg-blue-700 text-white">
+            <h3 class="text-lg font-bold">入力内容の確認（デモ）</h3>
+            <button id="btnClosePreview" class="px-2 py-1 rounded bg-white/20 hover:bg-white/30">閉じる</button>
+          </div>
+          <div id="previewBody" class="p-6 space-y-4 text-gray-800">
+            <!-- populated by JS -->
+          </div>
+          <div class="px-6 py-4 bg-gray-50 flex justify-end gap-3">
+            <button id="btnPrintPreview" class="px-4 py-2 rounded border">印刷（ブラウザ印刷）</button>
+            <button id="btnClosePreview2" class="px-4 py-2 rounded bg-blue-600 text-white">閉じる</button>
+          </div>
+        </div>
+      </div>
+      </main>
+
+      <footer class="bg-blue-900 text-white mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-xl font-bold mb-2">ゆめハウス</h4>
+        <p class="text-sm text-gray-200">株式会社Blooo</p>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">ナビ</h5>
+        <ul class="space-y-1 text-gray-200">
+          <li><a class="hover:text-yellow-300" href="../../">ホーム</a></li>
+          <li><a class="hover:text-yellow-300" href="../../pages/about.html">会社概要</a></li>
+          <li><a class="hover:text-yellow-300" href="../../pages/branch.html">支店情報</a></li>
+          <li><a class="hover:text-yellow-300" href="../../pages/properties/index.html">物件一覧</a></li>
+          <li><a class="hover:text-yellow-300" href="../../pages/contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">お問い合わせ</h5>
+        <p>熊本店: <a class="hover:text-yellow-300" href="tel:096-383-2001">096-383-2001</a></p>
+        <p>福岡店: <a class="hover:text-yellow-300" href="tel:092-985-8111">092-985-8111</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-blue-950 text-gray-300 text-center py-3 text-sm">
+    © <span id="currentYear"></span> Yume House / Blooo Inc.
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var y = document.getElementById('currentYear');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+  </script>
+
+
+    </div>
+  </body>
+  </html>

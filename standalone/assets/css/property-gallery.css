@@ -1,0 +1,228 @@
+/* Property Semantic Gallery (left-large + right-vertical on desktop, horizontal scroll-snap on mobile) */
+:root {
+  /* Gallery sizing variables - Optimized for uniform layout */
+  --psg-scale-factor: 0.6; /* Further reduced for better proportion */
+  --psg-mobile-height: 140px; /* Consistent mobile height */
+  --psg-grid-columns: 4; /* Number of columns for uniform grid */
+  --psg-aspect-ratio: 1.2; /* Slightly rectangular for better proportions */
+  
+  /* Spacing variables - Minimal gaps */
+  --psg-gap-desktop: 6px; /* Minimal gaps between images */
+  --psg-gap-mobile: 4px; /* Even smaller gaps on mobile */
+  --psg-margin-top: 10px; /* Reduced top margin */
+  --psg-caption-padding: 8px; /* Consistent caption padding */
+}
+
+.property-semantic-gallery { 
+  margin-top: var(--psg-margin-top); 
+  margin-bottom: 20px; /* Add bottom margin for section separation */
+  max-width: var(--page-max-width, 1120px); /* Match page container width */
+  margin-left: auto; 
+  margin-right: auto; 
+  padding: 0 var(--content-padding, 2rem); /* Match layout-container padding */
+  background: #fafafa; /* Subtle background to define the section */
+  border-radius: 12px; /* Rounded corners for modern look */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensure content fits within rounded corners */
+}
+.property-semantic-gallery .psg-header { 
+  display: flex; 
+  align-items: baseline; 
+  justify-content: space-between; 
+  gap: 12px; 
+  margin-bottom: 12px; 
+  padding: 16px 16px 0 16px; /* Add top and horizontal padding */
+  background: white; /* White background for header */
+}
+.property-semantic-gallery .psg-header h2 { 
+  margin: 0; 
+  font-size: 19px; /* Increased for better readability */
+  line-height: 1.3; 
+  font-weight: 700; 
+  color: #2c3e50; /* Better contrast */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  letter-spacing: 0.3px;
+}
+.property-semantic-gallery .psg-sub { 
+  margin: 0; 
+  font-size: 13px; /* Slightly larger */
+  color: #7f8c8d; /* Better contrast gray */
+  font-weight: 500; /* Slightly bolder */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+/* 2列グリッドレイアウト（5つの画像を均等配置） */
+.property-semantic-gallery .psg-container { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; /* 2列均等配置 */
+  gap: var(--psg-gap-desktop); 
+  align-items: start; 
+  padding: 0 16px 16px 16px; 
+  background: white; 
+  max-width: 900px; 
+  margin: 0 auto; 
+}
+.property-semantic-gallery .psg-figure { 
+  position: relative; 
+  background: #fff; 
+  border: 1px solid #e1e8ed; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08); 
+  display: flex; 
+  flex-direction: column; 
+  min-width: 0; 
+  transition: all 0.2s ease; 
+}
+/* 5番目の画像を2列目に配置（奇数個対応） */
+.property-semantic-gallery .psg-figure:nth-child(5) {
+  grid-column: 2;
+}
+.property-semantic-gallery .psg-media { 
+  position: relative; 
+  width: 100%; 
+  aspect-ratio: var(--psg-aspect-ratio); /* Consistent aspect ratio */
+  background: #f5f5f5; 
+  overflow: hidden; 
+}
+.property-semantic-gallery .psg-media img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block; 
+}
+.property-semantic-gallery .psg-figcaption { 
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  padding: var(--psg-caption-padding) 10px; 
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)); 
+  color: #fff; 
+}
+.property-semantic-gallery .psg-cap-title { 
+  font-weight: 700; 
+  font-size: 14px; /* Improved size for readability */
+  color: #fff; 
+  margin: 0 0 4px; 
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8); /* Enhanced text shadow */
+  letter-spacing: 0.3px; 
+  line-height: 1.3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+.property-semantic-gallery .psg-cap-desc { 
+  margin: 0; 
+  font-size: 12px; /* Better readable size */
+  color: #f0f0f0; /* Better contrast */
+  line-height: 1.4; 
+  display: -webkit-box; 
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical; 
+  overflow: hidden; 
+  font-weight: 400; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  letter-spacing: 0.1px;
+}
+
+/* Hover/focus state for better affordance */
+.property-semantic-gallery .psg-figure:focus-within,
+.property-semantic-gallery .psg-figure:hover { 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12); /* Enhanced hover shadow */
+  border-color: #3498db; /* Blue accent on hover */
+  transform: translateY(-1px); /* Subtle lift effect */
+}
+.property-semantic-gallery .psg-media:focus-visible { outline: 2px solid #4a90e2; outline-offset: 2px; }
+
+/* Tablet tweaks - 2列グリッドを維持 */
+@media (max-width: 1024px) {
+  .property-semantic-gallery .psg-container { 
+    grid-template-columns: 1fr 1fr; /* 2列均等配置を維持 */
+    gap: var(--psg-gap-desktop); 
+  }
+}
+
+/* Mobile: horizontal scroll with uniform cards */
+@media (max-width: 768px) {
+  .property-semantic-gallery { 
+    margin-left: 0; 
+    margin-right: 0; 
+    padding: 0 calc(var(--base-content-padding, 0.75rem) + var(--enhanced-horizontal-margin, 1rem)); 
+    border-radius: 8px; 
+    margin-bottom: 16px; 
+  }
+  .property-semantic-gallery .psg-header {
+    padding: 12px 12px 0 12px; 
+  }
+  .property-semantic-gallery .psg-header h2 {
+    font-size: 16px; 
+  }
+  .property-semantic-gallery .psg-container {
+    display: flex; /* Change to flex for horizontal scroll */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: var(--psg-gap-mobile);
+    padding: 0 12px 12px 12px; 
+  }
+  .property-semantic-gallery .psg-figure { 
+    flex: 0 0 calc(var(--psg-mobile-height) * var(--psg-aspect-ratio)); /* Fixed width based on aspect ratio */
+    scroll-snap-align: start; 
+    width: calc(var(--psg-mobile-height) * var(--psg-aspect-ratio));
+  }
+  .property-semantic-gallery .psg-media {
+    height: var(--psg-mobile-height);
+    aspect-ratio: unset; /* Override aspect ratio for mobile */
+  }
+  .property-semantic-gallery .psg-container::-webkit-scrollbar { height: 4px; }
+  .property-semantic-gallery .psg-container::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 2px; }
+}
+
+/* Responsive padding adjustments - Match layout-container */
+@media (min-width: 640px) {
+  .property-semantic-gallery {
+    padding: 0 calc(var(--base-content-padding, 0.75rem) + var(--enhanced-horizontal-margin, 1rem));
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .property-semantic-gallery {
+    padding: 0 calc(var(--base-content-padding, 1.5rem) + var(--enhanced-horizontal-margin, 1rem));
+  }
+}
+
+@media (min-width: 1025px) {
+  .property-semantic-gallery {
+    padding: 0 calc(var(--base-content-padding, 2.5rem) + var(--enhanced-horizontal-margin, 1rem));
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --psg-mobile-height: 120px; /* Smaller height for very small screens */
+    --psg-margin-top: 8px; 
+  }
+  
+  .property-semantic-gallery {
+    padding: 0 calc(var(--base-content-padding, 0.5rem) + var(--enhanced-horizontal-margin, 1rem)); 
+    margin-bottom: 12px; 
+  }
+  
+  .property-semantic-gallery .psg-header {
+    padding: 10px 10px 0 10px; 
+  }
+  
+  .property-semantic-gallery .psg-header h2 {
+    font-size: 15px; 
+  }
+  
+  .property-semantic-gallery .psg-container {
+    gap: var(--psg-gap-mobile);
+    padding: 0 10px 10px 10px; 
+  }
+  
+  .property-semantic-gallery .psg-figure { 
+    flex: 0 0 calc(var(--psg-mobile-height) * var(--psg-aspect-ratio)); 
+    width: calc(var(--psg-mobile-height) * var(--psg-aspect-ratio));
+  }
+}

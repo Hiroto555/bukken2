@@ -1,0 +1,36 @@
+<footer class="bg-blue-900 text-white mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-xl font-bold mb-2">ゆめハウス</h4>
+        <p class="text-sm text-gray-200">株式会社Blooo</p>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">ナビ</h5>
+        <ul class="space-y-1 text-gray-200">
+          <li><a class="hover:text-yellow-300" href="{{BASE}}/">ホーム</a></li>
+          <li><a class="hover:text-yellow-300" href="{{BASE}}/pages/about.html">会社概要</a></li>
+          <li><a class="hover:text-yellow-300" href="{{BASE}}/pages/branch.html">支店情報</a></li>
+          <li><a class="hover:text-yellow-300" href="{{BASE}}/pages/properties/index.html">物件一覧</a></li>
+          <li><a class="hover:text-yellow-300" href="{{BASE}}/pages/contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">お問い合わせ</h5>
+        <p>熊本店: <a class="hover:text-yellow-300" href="tel:096-383-2001">096-383-2001</a></p>
+        <p>福岡店: <a class="hover:text-yellow-300" href="tel:092-985-8111">092-985-8111</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-blue-950 text-gray-300 text-center py-3 text-sm">
+    © <span id="currentYear"></span> Yume House / Blooo Inc.
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var y = document.getElementById('currentYear');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+  </script>
+
